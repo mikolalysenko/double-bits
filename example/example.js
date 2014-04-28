@@ -7,7 +7,7 @@ console.log(db.hi(1.0).toString(16))    //Prints out: 3ff00000
 console.log(db.lo(1.0).toString(16))    //Prints out: 0
 
 //Combine two words into a double
-console.log(db.pack(0x3ff00000, 0))     //Prints out: 1.0
+console.log(db.pack(0, 0x3ff00000))     //Prints out: 1.0
 
 //More sophisticated example:  Print out base 2 representation
 var pad = require("pad")

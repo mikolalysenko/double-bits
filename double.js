@@ -9,8 +9,8 @@ if(UINT_VIEW[1] === 0x3ff00000) {
     return [ UINT_VIEW[0], UINT_VIEW[1] ]
   }
   function toDoubleLE(lo, hi) {
-    UINT_VIEW[0] = hi
-    UINT_VIEW[1] = lo
+    UINT_VIEW[0] = lo
+    UINT_VIEW[1] = hi
     return DOUBLE_VIEW[0]
   }
   module.exports.pack = toDoubleLE
@@ -31,8 +31,8 @@ if(UINT_VIEW[1] === 0x3ff00000) {
     return [ UINT_VIEW[1], UINT_VIEW[0] ]
   }
   function toDoubleBE(lo, hi) {
-    UINT_VIEW[0] = lo
-    UINT_VIEW[1] = hi
+    UINT_VIEW[1] = lo
+    UINT_VIEW[0] = hi
     return DOUBLE_VIEW[0]
   }
   module.exports.pack = toDoubleBE

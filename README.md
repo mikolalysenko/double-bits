@@ -16,8 +16,6 @@ console.log(db.lo(1.0).toString(16))    //Prints out: 0
 //Combine two words into a double
 console.log(db.pack(0, 0x3ff00000))     //Prints out: 1.0
 
-
-
 //More sophisticated example:  Print out base 2 representation
 var pad = require("pad")
 function base2Str(n) {
