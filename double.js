@@ -66,3 +66,8 @@ module.exports.fraction = function(n) {
   }
   return [lo, b]
 }
+
+module.exports.denormalized = function(n) {
+  var hi = module.exports.hi(n)
+  return !(hi & 0x7ff00000)
+}

@@ -94,5 +94,12 @@ Returns the fractional part of `n`
 
 **Returns** The fractional part of `n` encoded as a pair of numbers, `[lo,hi]` where `lo` is a 32 bit integer and `hi` is a 21 bit integer.
 
+### `db.denormalized(n)`
+Test if a double is [denormalized](http://en.wikipedia.org/wiki/Denormal_number).
+
+* `n` is a number
+
+**Returns** `true` if `n` is denormal, `false` otherwise
+
 # Credits
 (c) 2014 Mikola Lysenko. BSD License

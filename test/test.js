@@ -15,5 +15,10 @@ tape("double-bits", function(t) {
   t.equals(db.sign(-1), 1)
   t.equals(db.exponent(0.5), -1)
 
+  t.ok(db.denormalized(Math.pow(2, -1024)))
+  t.ok(!db.denormalized(1))
+  t.ok(db.denormalized(Math.pow(2, -1023)))
+  t.ok(!db.denormalized(Math.pow(2, -1022)))
+
   t.end()
 })
