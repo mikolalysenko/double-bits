@@ -2,7 +2,11 @@ double-bits
 ===========
 Routines for manipulating binary representations of a IEEE 754 double precision numbers.
 
-# Example
+[![testling badge](https://ci.testling.com/mikolalysenko/double-bits.png)](https://ci.testling.com/mikolalysenko/double-bits)
+
+[![build status](https://secure.travis-ci.org/mikolalysenko/double-bits.png)](http://travis-ci.org/mikolalysenko/double-bits)
+
+## Example
 
 ```javascript
 var db = require("double-bits")
@@ -32,13 +36,13 @@ console.log(base2Str(1.0))
 //
 ```
 
-# Install
+## Install
 
 ```
 npm install double-bits
 ```
 
-# API
+## API
 
 ```javascript
 var db = require("double-bits")
@@ -101,5 +105,5 @@ Test if a double is [denormalized](http://en.wikipedia.org/wiki/Denormal_number)
 
 **Returns** `true` if `n` is denormal, `false` otherwise
 
-# Credits
+## Credits
 (c) 2014 Mikola Lysenko. BSD License
