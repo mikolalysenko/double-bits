@@ -1,6 +1,6 @@
 {
   "name": "double-bits",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Inspect binary representation of IEEE754 doubles",
   "main": "double.js",
   "directories": {
