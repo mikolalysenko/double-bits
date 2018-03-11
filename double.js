@@ -55,23 +55,23 @@ if(typeof Float64Array !== "undefined") {
 if(!hasTypedArrays) {
   var buffer = new Buffer(8)
   module.exports = function doubleBits(n) {
-    buffer.writeDoubleLE(n, 0, true)
-    return [ buffer.readUInt32LE(0, true), buffer.readUInt32LE(4, true) ]
+    buffer.writeDoubleLE(n, 0)
+    return [ buffer.readUInt32LE(0), buffer.readUInt32LE(4) ]
   }
   function toDouble(lo, hi) {
-    buffer.writeUInt32LE(lo, 0, true)
-    buffer.writeUInt32LE(hi, 4, true)
-    return buffer.readDoubleLE(0, true)
+    buffer.writeUInt32LE(lo, 0)
+    buffer.writeUInt32LE(hi, 4)
+    return buffer.readDoubleLE(0)
   }
   module.exports.pack = toDouble  
   function lowUint(n) {
-    buffer.writeDoubleLE(n, 0, true)
-    return buffer.readUInt32LE(0, true)
+    buffer.writeDoubleLE(n, 0)
+    return buffer.readUInt32LE(0)
   }
   module.exports.lo = lowUint
   function highUint(n) {
-    buffer.writeDoubleLE(n, 0, true)
-    return buffer.readUInt32LE(4, true)
+    buffer.writeDoubleLE(n, 0)
+    return buffer.readUInt32LE(4)
   }
   module.exports.hi = highUint
 }
